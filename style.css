@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+:root{
+    --Linear-Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --Grayish-Blue: hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+    --bg-top-color: #F7F7FF;
+    --Font-body: "Montserrat", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 375px;
+    font-size: 15px;
+    font-family: var(--Font-body);
+    margin: 0 auto;
+}
+h1{
+    color: var(--Grayish-Blue);
+}
+.header{
+    background-color: var(--bg-top-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+.header div {
+    display: flex;
+    gap: 30px;
+    margin-top: 0px;
+    align-items: center;
+    color: var(--Light-Grayish-Blue);
+}
+.boton{
+    margin: 30px;
+}
+.lbl-switch{
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    background: hsl(237, 63%, 64%);
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+}
+#btn-switch:checked~ .lbl-switch{
+    background-color: hsl(237, 63%, 64%);
+}
+#btn-switch:checked~ .lbl-switch::after{
+    left: 28px;
+}
+.lbl-switch::after{
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 100px;
+    top: 4px;
+    left: 5px;
+    transition: 0.3s;
+}
+#btn-switch{
+    display: none;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #ECEBFF;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.15);
+    background: #fff;
+    padding: 10px;
+    border-radius: 12px;
+}
+.section p:first-child {
+    font-size: 1.2rem;
+    margin: 30px;
+    color: var(--Grayish-Blue);
+}
+.section .info{
+    color: var(--Grayish-Blue);
+}
+.section .info div {
+    border-top: 2px solid var(--Light-Grayish-Blue);
+    padding-top: 1rem;
+    margin: 0.666rem;
+}
+.section button{
+    margin: 0 10px;
+    width: 260px;
+    height: 50px;
+    background-color: hsl(236, 72%, 79%);
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+.section button:hover {
+    background-color: hsl(236, 82%, 72%);
+    cursor: pointer;
+}
+.section .btn-prof:hover{
+    color: #fff;
+    background-color: hsl(236, 82%, 72%);
+}
+.price{
+    font-size: 3.666rem;
+    font-weight: bold;
+    color: #000;
+}
+.annualy{
+    display: block;
+}
+.monthly{
+    display: none;
+}
+.basic {
+    margin: 0 auto;
+    width: 300px;
+    height: 450px;
+}
+.professional{
+    margin: 0 auto;
+    width: 300px;
+    height: 450px;
+    background-color: hsl(237, 63%, 64%);
+}
+.professional p:first-child{
+    color: #fff;
+}
+.prof{
+    color: #fff;
+}
+.professional .info-prof p{
+    color: #fff;
+}
+.btn-prof{
+    background-color: #fff;
+    color: hsl(237, 63%, 64%);
+}
+.professional .info-prof div {
+    border-top: 2px solid var(--Light-Grayish-Blue);
+    padding-top: 1rem;
+    margin: 0.666rem;
+}
+.professional .btn-prof{
+    background-color: #fff;
+    color: hsl(237, 63%, 64%);
+}
+.attribution { 
+    width: 100%;
+    height: 65px;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+@media screen and (min-width: 1200px){
+    body{
+        width: 100%;
+        background-color: var(--bg-top-color);
+    }
+    main {
+        background-color: var(--bg-top-color);
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 0;
+        justify-content: center;
+    }
+    .section {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        text-align: center;
+        padding: 0;
+    }
+    .basic{
+        margin-top: 20px;
+        height: 500px;
+    }
+    .professional{
+        height: 550px;
+    }
+    .master{
+        margin-top: 20px;
+        height: 500px;
+    }
+}
